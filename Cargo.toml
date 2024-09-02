@@ -30,8 +30,9 @@ document-features = { version = "0.2.7", optional = true }
 instability = "0.3.1"
 itertools = "0.13"
 lru = "0.12.0"
-paste = "1.0.2"
+mempool_space = { git = "https://github.com/randymcmillan/mempool_space.git", version = "0.0.50" }
 palette = { version = "0.7.6", optional = true }
+paste = "1.0.2"
 serde = { version = "1", optional = true, features = ["derive"] }
 strum = { version = "0.26", features = ["derive"] }
 strum_macros = { version = "0.26.3" }
@@ -146,14 +147,12 @@ all-widgets = ["widget-calendar"]
 #! dependencies. The available features are:
 ## enables the [`calendar`](widgets::calendar) widget module and adds a dependency on [`time`].
 widget-calendar = ["dep:time"]
-
 #! The following optional features are only available for some backends:
 
 ## enables the backend code that sets the underline color.
 ## Underline color is only supported by the [`CrosstermBackend`](backend::CrosstermBackend) backend,
 ## and is not supported on Windows 7.
 underline-color = ["dep:crossterm"]
-
 #! The following features are unstable and may change in the future:
 
 ## Enable all unstable features.
